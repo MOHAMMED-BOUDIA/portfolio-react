@@ -45,20 +45,7 @@ const About = () => {
               or shipping independently, I prioritize code quality, accessibility, and measurable impact.
             </motion.p>
 
-            <motion.div className='grid grid-cols-1 gap-4 pt-2 sm:grid-cols-3' variants={staggerContainer}>
-              <motion.div variants={fadeInUp} className='rounded-2xl border border-slate-800 bg-slate-900/70 p-5'>
-                <p className='text-2xl font-black text-cyan-300'>3+</p>
-                <p className='mt-1 text-xs font-semibold uppercase tracking-widest text-slate-400'>Years Learning</p>
-              </motion.div>
-              <motion.div variants={fadeInUp} className='rounded-2xl border border-slate-800 bg-slate-900/70 p-5'>
-                <p className='text-2xl font-black text-indigo-300'>20+</p>
-                <p className='mt-1 text-xs font-semibold uppercase tracking-widest text-slate-400'>Projects Built</p>
-              </motion.div>
-              <motion.div variants={fadeInUp} className='rounded-2xl border border-slate-800 bg-slate-900/70 p-5'>
-                <p className='text-2xl font-black text-sky-300'>15+</p>
-                <p className='mt-1 text-xs font-semibold uppercase tracking-widest text-slate-400'>Core Technologies</p>
-              </motion.div>
-            </motion.div>
+            
           </motion.div>
         </motion.div>
       </div>

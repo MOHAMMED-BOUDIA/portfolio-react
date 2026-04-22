@@ -134,30 +134,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Proficiency Overview row */}
-        <motion.div 
-          className='mt-24 grid grid-cols-2 gap-4 rounded-3xl border border-slate-800 bg-slate-900/30 p-8 md:grid-cols-4 lg:p-12'
-          variants={fadeInUp}
-          initial='hidden'
-          whileInView='visible'
-          viewport={viewport}
-        >
-          {skillStats.map((stat, idx) => (
-            <div 
-              key={stat.label} 
-              className={`flex flex-col items-center justify-center text-center ${
-                idx !== skillStats.length - 1 ? 'md:border-r md:border-slate-800' : ''
-              }`}
-            >
-              <span className={`text-3xl font-black md:text-4xl lg:text-5xl ${stat.color} mb-2`}>
-                {stat.value}
-              </span>
-              <span className='text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 md:text-xs'>
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </motion.div>
+        
       </div>
     </section>
   );

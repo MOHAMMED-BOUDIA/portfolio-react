@@ -62,9 +62,9 @@ const Projects = () => {
                     </Button>
                   </a>
 
-                  <a href={project.liveDemo} target='_blank' rel='noopener noreferrer'>
+                  <a href={project.live} target='_blank' rel='noopener noreferrer'>
                     <Button className='px-4 py-2 text-sm' icon={<ExternalLink size={16} />}>
-                      Live Demo
+                      Live 
                     </Button>
                   </a>
                 </div>
