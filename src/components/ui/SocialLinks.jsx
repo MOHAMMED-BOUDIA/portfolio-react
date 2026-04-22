@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { socialLinks } from '../../data/socialLinks';
 import { twMerge } from 'tailwind-merge';
 
@@ -13,6 +13,11 @@ const SocialLinks = ({ className = '' }) => {
         return <FaTwitter className='h-5 w-5' />;
       case 'facebook':
         return <FaFacebook className='h-5 w-5' />;
+      case 'whatsapp':
+        return <FaWhatsapp className='h-5 w-5' />;
+      case 'email':
+        return <FaEnvelope className='h-5 w-5' />;
+
       default: return null;
     }
   };

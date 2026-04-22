@@ -122,7 +122,7 @@ const Services = () => {
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">Have a unique project?</h3>
             <p className="mb-6 text-sm text-slate-400">Let's discuss how I can help bring your vision to life with custom engineering.</p>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 transition-transform hover:scale-105 active:scale-95">
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-950 transition-transform hover:scale-105 active:scale-95">
               Contact Me
             </a>
           </motion.div>

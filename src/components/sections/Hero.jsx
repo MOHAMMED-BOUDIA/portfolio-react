@@ -3,7 +3,7 @@ import SocialLinks from '../ui/SocialLinks';
 import { Download, ExternalLink, Mail, Sparkles, ChevronRight } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { PERSONAL_INFO } from '../../utils/constants';
-import cvFile from '../../assets/files/cv.pdf';
+import cvFile from '../../assets/files/MOHAMMED BOUDIA(2).pdf';
 import profileImage from '../../assets/images/profile.png';
 import { fadeInUp, staggerContainer, viewport } from '../../utils/animations';
 import { useEffect, useState } from 'react';
