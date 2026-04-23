@@ -14,15 +14,43 @@ import { useEffect, useState } from 'react';
 export const useScrollSpy = (
   sectionIds,
   {
-    rootMargin = '-30% 0px -60% 0px',
-    threshold = [0.1, 0.25, 0.5, 0.75],
+    rootMargin = '-15% 0px -55% 0px',
+    threshold = [0, 0.1, 0.25, 0.5],
     initialSection,
+    offset = 120,
   } = {}
 ) => {
   const [activeSection, setActiveSection] = useState(initialSection || sectionIds[0] || '');
 
   useEffect(() => {
     if (!sectionIds.length) return;
+
+    let rafId = 0;
+
+    const getCurrentSectionFromScroll = () => {
+      const scrollPosition = window.scrollY + offset;
+      let currentId = sectionIds[0];
+
+      sectionIds.forEach((id) => {
+        const element = document.getElementById(id);
+        if (!element) return;
+        if (element.offsetTop <= scrollPosition) {
+          currentId = id;
+        }
+      });
+
+      if (currentId) {
+        setActiveSection((prev) => (prev === currentId ? prev : currentId));
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId) return;
+      rafId = window.requestAnimationFrame(() => {
+        getCurrentSectionFromScroll();
+        rafId = 0;
+      });
+    };
 
     const visibilityById = new Map(sectionIds.map((id) => [id, 0]));
 
@@ -47,7 +75,11 @@ export const useScrollSpy = (
 
         if (maxRatio > 0 && nextSection) {
           setActiveSection(nextSection);
+          return;
         }
+
+        // Fallback for edge cases where intersection ratios are all 0.
+        getCurrentSectionFromScroll();
       },
       {
         rootMargin,
@@ -62,8 +94,19 @@ export const useScrollSpy = (
       }
     });
 
-    return () => observer.disconnect();
-  }, [initialSection, rootMargin, sectionIds, threshold]);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    getCurrentSectionFromScroll();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, [initialSection, offset, rootMargin, sectionIds, threshold]);
 
   return activeSection;
 };
