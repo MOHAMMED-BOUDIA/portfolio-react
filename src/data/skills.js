@@ -105,20 +105,7 @@ export const skills = [
         desc: 'NoSQL (MongoDB) and Relational (MySQL) modeling and optimization.',
         color: 'text-blue-400'
       },
-      {
-        name: 'Python',
-        icon: 'FaPython',
-        level: 'Intermediate',
-        desc: 'Data processing, automation scripts, and backend integration.',
-        color: 'text-blue-500'
-      },
-      {
-        name: 'Java',
-        icon: 'FaJava',
-        level: 'Intermediate',
-        desc: 'OOP principles, robust enterprise logic, and system architecture.',
-        color: 'text-red-500'
-      },
+      
       {
         name: 'REST APIs',
         icon: 'Zap',
@@ -146,20 +133,7 @@ export const skills = [
         desc: 'Vite, Webpack, and browser debugging for peak productivity.',
         color: 'text-cyan-500'
       },
-      {
-        name: 'Testing & QA',
-        icon: 'SiTestinglibrary',
-        level: 'Advanced',
-        desc: 'Unit testing, integration tests, and ensuring code reliability.',
-        color: 'text-rose-500'
-      },
-      {
-        name: 'Postman',
-        icon: 'SiPostman',
-        level: 'Advanced',
-        desc: 'Comprehensive API testing, documentation, and mock servers.',
-        color: 'text-orange-400'
-      },
+     
       {
         name: 'Cloud & Deploy',
         icon: 'Cloud',
