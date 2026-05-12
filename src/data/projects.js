@@ -32,7 +32,7 @@ export const projects = [
     stack: ['React', 'Vite', 'Tailwind CSS', 'Netlify'],
     githubLink: 'https://github.com/MOHAMMED-BOUDIA/crm',
     live: 'https://crm-orpin-zeta.vercel.app/',
-    category: 'Full Stack',
+    category: 'Front End',
     features: ['Customer data & interaction management', 'Sales pipeline tracking', 'Task & activity monitoring', 'Responsive dark-mode UI', 'Modular and scalable architecture'],
   },
 ];
