@@ -3,6 +3,7 @@ import { BriefcaseBusiness, Code2, FolderKanban, GraduationCap, Handshake, Home,
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { useNavbarScroll } from '../../hooks/useNavbarScroll';
 import { NAV_ITEMS, PERSONAL_INFO } from '../../utils/constants';
+import logo from '../../assets/images/bgb.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,11 +130,13 @@ const Navbar = () => {
             setIsOpen(false);
           }}
         >
-          <span className='inline-flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-400/40 bg-gradient-to-br from-cyan-500/20 to-cyan-400/10 text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_25px_rgba(34,211,238,0.4)]'>
-            <Code2 size={16} />
-          </span>
+          <img
+            src={logo}
+            alt='MB Logo'
+            className='inline-flex h-12 w-12 items-center justify-center rounded-lg object-contain transition-all duration-300 hover:scale-110 md:h-14 md:w-14'
+          />
           {PERSONAL_INFO.name}
-          <span className='text-cyan-400'>.dev</span>
+          
         </a>
 
         {/* Desktop Navigation */}

@@ -16,7 +16,6 @@ const Footer = () => {
         <div>
           <a href='#home' className='text-lg font-black text-white'>
             {PERSONAL_INFO.name}
-            <span className='text-cyan-400'>.web</span>
           </a>
           <p className='mt-2 text-sm text-slate-400'>
             {PERSONAL_INFO.title} in {PERSONAL_INFO.location}
